@@ -1,0 +1,114 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+body{
+  font-family: 'SamsungOne', arial, sans-serif;
+}
+
+a{
+    text-decoration: none !important;
+}
+
+header{
+    height: 60px;
+    width: 100%;
+}
+
+.navBar{
+    width: 95%;
+    height: 60px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.navweight{
+    font-weight: 500;
+}
+
+
+.dropdown-content a {
+    color: black;
+    font-size: .8rem;
+    padding: 8px 6px;
+    text-decoration: none;
+    display: block;
+    // background-color: #ddd;
+  }
+
+.dropbtn {
+    color: white;
+    border: none;
+  }
+
+  .dropdown-content{
+    display: none !important;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .showBar:hover >
+  .dropdown-content {
+    position: absolute;
+    display: block !important;
+    width: 50%;
+    // height: 500px;
+    padding: 10px;
+    // background-color: #fef6f4 !important;
+    border-radius: 0 0 20px 20px ;
+  }
+
+  .mainWidth{
+     width: 20%;
+  }
+
+  .linksHere{
+    width: 70% !important;
+    border-right: .5px solid #a79f9f;
+    padding: 10px;
+
+  }
+
+
+  .bgComman{
+       background-color: #d0cdcc !important;
+       width: 25%;
+       padding: 10px;
+  }
+
+  .navLinks {
+    font-size: .7rem;
+  }
+
+  .center-app-data{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+  }
+
+  .slideInfo{
+    left: 8%;
+    top: 35%;
+  }
+
+  .commanBtn{
+    padding: 8px 30px !important;
+    border-radius: 20px !important;
+    background: #242424;
+    color: #fff;
+  }
+
+  .mainGrid{
+    left: 50%;
+    width: 90%;
+    bottom: 0%;
+    transform: translate(-50%, -22%);
+    position: absolute;
+    z-index: 99;
+  }  
