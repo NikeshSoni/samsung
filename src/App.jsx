@@ -7,8 +7,8 @@ import Mobile from './pages/Mobile';
 import TV from './pages/TV';
 import HomeApplication from './pages/HomeApplication';
 import Computing from './pages/Computing';
-import Slider from './components/Slider';
-import Week from './components/WeekHighilight/Week'
+
+// import Login from './pages/Login/Login';
 
 function App() {
   return (
@@ -23,8 +23,7 @@ function App() {
                   <Route  path='/computing' element={<Computing />} />
           </Routes>
       </HashRouter> 
-          <Slider />
-          <Week />
+      
       
     </>
   )
