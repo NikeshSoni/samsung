@@ -43,20 +43,21 @@ const Login = (props) => {
     return (
         <>
 
-            <Modal {...props} aria-labelledby="contained-modal-title-vcenter">
+            <Modal {...props}  aria-labelledby="contained-modal-title-vcenter">
                 <Modal.Header closeButton>
                     <Modal.Title id="contained-modal-title-vcenter">
-                        Using Grid in Modal
+                        {/* Using Grid in Modal */}
+                        <div className=' mt-2'>
+                        <h3>
+                            {loginItem ? "Login" : "Sigin"} Your Account
+                        </h3>
+                    </div>
                     </Modal.Title>
                 </Modal.Header>
                 
                 <div className='row'>
                 <form onSubmit={handleSubmit} className='container col-9 col-md-6 col-lg-5 mt-2'>
-                    <div className='text-center mt-2'>
-                        <h3>
-                            {loginItem ? "Login" : "Sigin"} Your Account
-                        </h3>
-                    </div>
+                   
 
                     <div className={loginItem ? 'd-none' : 'd-block'}>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -99,15 +100,12 @@ const Login = (props) => {
                         <Form.Check type="checkbox" label={changeItem} />
                     </Form.Group>
 
-                    <div className='d-flex gap-3'>
+                    <div className='d-flex gap-3 my-4'>
                         <Button onClick={handleLogin} variant="success">{loginItem ? "Sigin" : "Login"}</Button>
                         <Button variant="primary" type="submit"> Submit </Button>
                     </div>
                 </form>
             </div>
-                {/* <Modal.Footer>
-                    <Button onClick={props.onHide}>Close</Button>
-                </Modal.Footer> */}
             </Modal>
            
 
