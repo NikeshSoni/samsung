@@ -11,11 +11,12 @@ const Highlights = (props) => {
                 <div class="row mx-auto">
                     <div class="col-12 text-center mb-3 mb-lg-0 mx-auto col-lg-6">
                         <div className="position-relative">
-                            <div className="mainGrid mt-2 text-center">
-                                <h4>{itemval.heading}</h4>
-                                <h4>{itemval.info}</h4>
+                            <div className="mainGrid  text-center">
+                                <h4 className='fs-5'>{itemval.heading}</h4>
+                                <h4 className='fs-5'>{itemval.info}</h4>
                                 <p className="">{itemval.discription}</p>
-                                <button type="button" className="btn btn-info">Buy now</button>
+                                <button type="button" 
+                                    className="btn btn-info mx-auto d-none d-md-block">Buy now</button>
                             </div>
                             <img
                                 className="img-fluid  rounded-3"
@@ -24,8 +25,8 @@ const Highlights = (props) => {
                         </div>
                     </div>
 
-                    <div class="col-6  row">
-                        <div class="row  flex-wrap">
+                    <div class="col-12 col-lg-6 mx-auto row">
+                        <div class="row mx-auto flex-wrap">
                             <ReuseComponents itemsdata={MobileStore} />
                         </div>
                     </div>

@@ -21,8 +21,8 @@ const Appliances = (props) => {
                               />
                         </div>
                     </div>
-                    <div className="col-12 col-lg-6 text-center row">
-                    <div className="row flex-wrap">
+                    <div className="col-12 col-lg-6 mx-auto row">
+                    <div className="row mx-auto  flex-wrap">
                         <ReuseComponents itemsdata={ApplicationStore} />
                     </div>
                 </div>

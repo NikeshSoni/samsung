@@ -42,7 +42,7 @@ const New = (props) => {
                                 <h4>{itemval.heading}</h4>
                                 <h4>{itemval.info}</h4>
                                 <p className="">{itemval.discription}</p>
-                                <button type="button" className="btn btn-info">Buy now</button>
+                                <button type="button" className="btn btn-info mx-auto d-none d-md-block">Buy now</button>
                             </div>
                             <img
                                 className="img-fluid  rounded-3"

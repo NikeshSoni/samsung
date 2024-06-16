@@ -18,7 +18,7 @@ const TvInfo = (props) => {
                             <div className="mainGrid mt-2 text-center">
                                 <h4>{itemval.heading}</h4>
                                 <p className="">{itemval.discription}</p>
-                                <button type="button" className="btn btn-info">Buy now</button>
+                                <button type="button" className="btn btn-info d-none mx-auto d-md-block">Buy now</button>
                             </div>
                             <img
                                 className="img-fluid  rounded-3"
@@ -26,8 +26,8 @@ const TvInfo = (props) => {
                               />
                         </div>
                     </div>
-                    <div className="col-12 col-lg-6 text-center row">
-                    <div className="row flex-wrap">
+                    <div className="col-12 mx-auto  col-lg-6 text-center">
+                    <div className="row mx-auto  flex-wrap">
                         <ReuseComponents itemsdata={TvStore} />
                     </div>
                 </div>
