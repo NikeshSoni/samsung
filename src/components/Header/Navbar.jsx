@@ -21,7 +21,7 @@ const Navbar = () => {
                         <h3>Samsung</h3>
                     </div>
 
-                    <ul className='p-0 m-0 d-flex gap-3'>
+                    <ul className='p-0 m-0 d-flex gap-4'>
                         <Link className='text-dark navweight' to='/'>
                             Shop
                         </Link>
@@ -34,14 +34,8 @@ const Navbar = () => {
                         <Link className='text-dark navweight' to='/tv'>
                             TV&AV
                         </Link>
-                        <Link className='text-dark navweight' to='/mobile'>
-                            Mobile
-                        </Link>
                         <Link className='text-dark navweight' to='/homeApplication'>
                             Home Application
-                        </Link>
-                        <Link className='text-dark navweight' to='/computing'>
-                            Computing
                         </Link>
                     </ul>
 
@@ -58,7 +52,6 @@ const Navbar = () => {
                         <img src={Search} />
 
 
-                        {/* Login */}
                         <img src={Shoping} />
 
                         <div variant="primary"className='text-dark w-100 navweight' >
@@ -68,9 +61,6 @@ const Navbar = () => {
                     </div>
                 </nav>
             </header>
-
-
-
         </>
     )
 }

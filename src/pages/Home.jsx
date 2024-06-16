@@ -1,6 +1,7 @@
 import Navbar from "../components/Header/Navbar";
 import Slider from '../components/Slider';
 import Week from '../components/WeekHighilight/Week';
+import CardWork from '../components/ProductsCards/CardWork'
 
 const Home = () => {
     return (
@@ -8,6 +9,7 @@ const Home = () => {
             <Navbar />
             <Slider />
             <Week />
+            <CardWork />
         </>
     )
 }

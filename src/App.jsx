@@ -8,8 +8,6 @@ import TV from './pages/TV';
 import HomeApplication from './pages/HomeApplication';
 import Computing from './pages/Computing';
 
-// import Login from './pages/Login/Login';
-
 function App() {
   return (
     <>

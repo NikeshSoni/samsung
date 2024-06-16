@@ -95,6 +95,12 @@ header{
   .slideInfo{
     left: 8%;
     top: 35%;
+
+    @media (max-width:768px) {
+      // .slideInfo{
+        top: 8% !important;
+      // }
+    }
   }
 
   .commanBtn{
@@ -124,8 +130,19 @@ header{
 
         }
   }
-
   } 
 
- 
+ .cardBg{
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    width: 24%;
 
+    @media (max-width:820px) {
+       width: 49% !important;
+      
+    }
+ }
+
+ .commanCardFonts{
+    font-size: .9rem;
+ }
