@@ -3,7 +3,7 @@ import ApplicationStore from './StoreHighiligts/Application'
 
 const Appliances = (props) => {
 
-    const {itemval } = props;
+    const { itemval } = props;
     return(
        <>
          <div className="p-1 p-md-2 p-lg-3">
