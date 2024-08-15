@@ -3,12 +3,7 @@ import { useState } from 'react';
 
 const CardWork = ({ onAddToCart }) => {
 
-    // function handleAddToCart (id) {
-    //     console.log(id , "get id number");
-    // }
-
     return (
-
         <>
             <div className='text-center my-4'>
                 <h1>Recommended Products</h1>
@@ -22,7 +17,7 @@ const CardWork = ({ onAddToCart }) => {
                             <div className="card-body">
                                 <h6 className="card-text fw-bolder commanCardFonts"> {items.heading}</h6>
                                 <div>
-                                    <h5> Price - {items.price}</h5>
+                                    <h5> Price - ₹ {items.price}</h5>
                                     <p className="p-0 m-0 navLinks ">{items.discription}</p>
                                     <p className="p-0 m-0 navLinks ">{items.saveMoney}</p>
                                 </div>

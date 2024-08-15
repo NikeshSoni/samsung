@@ -8,28 +8,47 @@ import { useState } from 'react';
 
 const Home = () => {
 
-    const [selectedProduct, setSelectedProduct] = useState(null);
-    const [selectedProductMap, setSelectedProductMap] = useState([]);
+    const [cart, setCart] = useState([]);
 
-  const handleAddToCart = (product) => {
-         setSelectedProduct(product);
-
-        //  selectedProductMap.length(0);
-
-         setSelectedProductMap(selectedProduct)
-
-        //  selectedProduct.push(selectedProductMap);
-
-        console.log(selectedProduct);
-  };
+    const handleAddToCart = (product) => {
+        setCart((prevCart) => {
+          // Check if the product is already in the cart
+          const existingProduct = prevCart.find((item) => item.id === product.id);
+          if (existingProduct) {
+            // If it is, increase the quantity
+            return prevCart.map((item) =>
+              item.id === product.id
+                ? { ...item, quantity: item.quantity + 1 }
+                : item
+            );
+          } else {
+            // If it's not, add the product with quantity 1
+            return [...prevCart, { ...product, quantity: 1 }];
+          }
+        });
+      };
+    
+      const handleUpdateQuantity = (productId, newQuantity) => {
+        setCart((prevCart) =>
+          prevCart.map((item) =>
+            item.id === productId ? { ...item, quantity: newQuantity } : item
+          )
+        );
+      };
+    
+      const handleRemoveFromCart = (productId) => {
+        setCart((prevCart) => prevCart.filter((item) => item.id !== productId));
+      };
 
     return (
         <>
             <Navbar />
             <Slider />
             <Week />
-            <CardWork  onAddToCart={handleAddToCart}/>
-            <AddToCart product={selectedProduct}/>
+            <CardWork onAddToCart={handleAddToCart} />
+            <AddToCart cartData={cart} onRemoveFromCart={handleRemoveFromCart} onUpdateQuantity={handleUpdateQuantity}  />
+
+            {/* product={cartItems} */}
         </>
     )
 }

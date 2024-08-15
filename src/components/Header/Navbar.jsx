@@ -7,6 +7,7 @@ import Mobile from '../../pages/Mobile';
 import Login from '../../pages/Login/Login';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
+import AddToCart from './AddToCart';
 
 
 const Navbar = () => {
@@ -52,17 +53,28 @@ const Navbar = () => {
                         <img src={Search} />
 
 
-                        <img src={Shoping} />
+                        <div data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                            <img src={Shoping} />
+                        </div>
 
-                        <div variant="primary"className='text-dark w-100 navweight' >
-                            <img src={Person} variant="primary" onClick={() => setModalShow(true)} />
+
+                        <div variant="primary" className='text-dark w-100 navweight' >
+                            <img src={Person} variant="primary" />
                             <Login show={modalShow} onHide={() => setModalShow(false)} />
                         </div>
                     </div>
+
+                    {/* <AddToCart /> */}
                 </nav>
             </header>
         </>
     )
 }
+
+
+
+
+
 
 export default Navbar;

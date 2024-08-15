@@ -146,3 +146,13 @@ header{
  .commanCardFonts{
     font-size: .9rem;
  }
+
+
+  .fixed-card{
+    position: absolute;
+    top: 60px;
+    right: 0px;
+    width: 25%;
+    background: #fff;
+    height: calc(100vh - 60px);
+  }
