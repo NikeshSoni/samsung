@@ -38,9 +38,7 @@ const AddToCart = ({ cartData, onUpdateQuantity , onRemoveFromCart }) => {
 
                 <div>
                   <p className='p-0 m-0' style={{ fontSize: ".9rem", fontWeight: "600" }}> {product.heading}</p>
-                  {/* <p className='mt-2 mb-1' style={{ fontSize: ".9rem", fontWeight: "600" }}>${product.price}</p> */}
                   <p className='mt-2 mb-1' style={{ fontSize: ".9rem", fontWeight: "600" }}>${calculateTotalAmount()}</p>
-
 
                   <div className='d-flex gap-4 align-items-center'>
                     <button onClick={() => handleQuantityChange(product.id, -1)}>
@@ -62,27 +60,8 @@ const AddToCart = ({ cartData, onUpdateQuantity , onRemoveFromCart }) => {
           ) : (
             <p>No products in cart</p>
           )}
-
-          {/* {cartData.length > 0 ? (
-            cartData.map((product) => (
-              <div key={product.id}>
-                <p>
-                  {product.name} - ${product.price} x {product.quantity}
-                </p>
-                <button onClick={() => handleQuantityChange(product.id, -1)}>
-                  -
-                </button>
-                <button onClick={() => handleQuantityChange(product.id, 1)}>
-                  +
-                </button>
-              </div>
-            ))
-          ) : (
-            <p>No products in cart</p>
-          )} */}
         </div>
       </div>
-
     </div >
   )
 }
