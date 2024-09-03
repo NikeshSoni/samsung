@@ -15,11 +15,10 @@ const CardWork = ({ onAddToCart }) => {
             <div className='text-center my-4'>
                 <h1>Recommended Products</h1>
             </div>
-            <div className="my-5  flex-wrap d-flex container mx-auto ">
-
+            <div className="my-5 row container d-flex mx-auto">
                 {CardStore.map((items) => {
                     return (
-                        <div key={items.id} className="cardBg p-4 mt-2 text-center mx-auto " >
+                        <div key={items.id} className="cardBg col-10 p-2 p-md-4 mt-2 text-center mx-auto" data-aos="flip-left" >
                             <img src={items.image} className="img-fluid" alt="product" />
                             <div className="card-body">
                                 <h6 className="card-text fw-bolder commanCardFonts"> {items.heading}</h6>
@@ -37,11 +36,13 @@ const CardWork = ({ onAddToCart }) => {
                                 <h5> Price - ₹ {items.price}</h5>
                                 </div>
                                 <div className='d-flex gap-4 justify-content-center my-2'>
-                                    <button type="button" className="btn btn-dark mt-2"
+                                    <button type="button" onClick={() => onAddToBuy(items)}
+                                            className="btn btn-dark mt-2 comman-fonts"
                                         data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                        onClick={() => onAddToBuy(items)}>
+                                        >
                                         Buy Now</button>
-                                    <button type="button" onClick={() => onAddToCart(items)} className="btn btn-primery mt-2">
+                                    <button type="button" onClick={() => onAddToCart(items)} 
+                                            className="btn btn-primery mt-2 comman-fonts">
                                         Add to Cart
                                     </button>
                                 </div>
@@ -52,7 +53,7 @@ const CardWork = ({ onAddToCart }) => {
             </div>
 
             <BuyProduct  onAddToBuyPass={dataProduct}/>
-            
+
         </>
 
     )

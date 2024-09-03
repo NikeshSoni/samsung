@@ -11,7 +11,7 @@ const TvInfo = (props) => {
 
     return(
        <>
-         <div className="p-1 p-md-2 p-lg-3 ">
+         <div className="p-1 p-md-2 p-lg-3 " data-aos="fade-left">
                 <div className="row d-flex">
                     <div className="col-12 text-center mb-3 mb-lg-0 mx-auto col-lg-6">
                         <div className="position-relative">

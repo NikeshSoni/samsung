@@ -4,10 +4,10 @@ import MobileStore from './StoreHighiligts/Mobile'
 const Highlights = (props) => {
 
     const {itemval} = props;
-
+ 
     return (
         <>
-            <div class="p-1 p-md-2 p-lg-3">
+            <div class="p-1 p-md-2 p-lg-3" data-aos="fade-left">
                 <div class="row mx-auto">
                     <div class="col-12 text-center mb-3 mb-lg-0 mx-auto col-lg-6">
                         <div className="position-relative">

@@ -39,7 +39,7 @@ const Week = () => {
 
     return (
         <>
-            <div className="mainWapper">
+            <div className="mainWapper" >
                 <div className="text-center my-5">
                     <h1>This Week’s Highlights</h1>
                 </div>

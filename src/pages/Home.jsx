@@ -3,12 +3,23 @@ import Slider from '../components/Slider';
 import Week from '../components/WeekHighilight/Week';
 import CardWork from '../components/ProductsCards/CardWork'
 import AddToCart from "../components/Header/AddToCart";
-import { useState } from 'react';
+import { useState , useEffect } from 'react';
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 
 
 const Home = () => {
 
     const [cart, setCart] = useState([]);
+
+    useEffect(() => {
+      AOS.init({
+        disable: "phone",
+        duration: 700,
+        easing: "ease-out-cubic",
+      });
+    }, []);
 
     const handleAddToCart = (product) => {
         setCart((prevCart) => {
